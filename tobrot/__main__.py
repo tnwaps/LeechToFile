@@ -93,45 +93,45 @@ if __name__ == "__main__" :
     #
     status_message_handler = MessageHandler(
         status_message_f,
-        filters=Filters.command(["status"]) & Filters.chat(chats=AUTH_CHANNEL)
+        filters=Filters.command(["status@torlecbot"]) & Filters.chat(chats=AUTH_CHANNEL)
     )
     app.add_handler(status_message_handler)
     #
     cancel_message_handler = MessageHandler(
         cancel_message_f,
-        filters=Filters.command(["cancel"]) & Filters.chat(chats=AUTH_CHANNEL)
+        filters=Filters.command(["cancel@torlecbot"]) & Filters.chat(chats=AUTH_CHANNEL)
     )
     app.add_handler(cancel_message_handler)
     #
     exec_message_handler = MessageHandler(
         exec_message_f,
-        filters=Filters.command(["exec"]) & Filters.chat(chats=AUTH_CHANNEL)
+        filters=Filters.command(["exec@torlecbot"]) & Filters.chat(chats=AUTH_CHANNEL)
     )
     app.add_handler(exec_message_handler)
     #
     '''
     eval_message_handler = MessageHandler(
         eval_message_f,
-        filters=Filters.command(["eval"]) & Filters.chat(chats=AUTH_CHANNEL)
+        filters=Filters.command(["eval@torlecbot"]) & Filters.chat(chats=AUTH_CHANNEL)
     )
     app.add_handler(eval_message_handler)
     '''
     #
     rename_message_handler = MessageHandler(
         rename_message_f,
-        filters=Filters.command(["rename"]) & Filters.chat(chats=AUTH_CHANNEL)
+        filters=Filters.command(["rename@torlecbot"]) & Filters.chat(chats=AUTH_CHANNEL)
     )
     app.add_handler(rename_message_handler)
     #
     upload_document_handler = MessageHandler(
         upload_document_f,
-        filters=Filters.command(["upload"]) & Filters.chat(chats=AUTH_CHANNEL)
+        filters=Filters.command(["upload@torlecbot"]) & Filters.chat(chats=AUTH_CHANNEL)
     )
     app.add_handler(upload_document_handler)
 
     help_text_handler = MessageHandler(
         help_message_f,
-        filters=Filters.command(["help"]) & Filters.chat(chats=AUTH_CHANNEL)
+        filters=Filters.command(["help@torlecbot"]) & Filters.chat(chats=AUTH_CHANNEL)
     )
     app.add_handler(help_text_handler)
     #
@@ -154,13 +154,13 @@ if __name__ == "__main__" :
     #
     save_thumb_nail_handler = MessageHandler(
         save_thumb_nail,
-        filters=Filters.command(["savethumb"]) & Filters.chat(chats=AUTH_CHANNEL)
+        filters=Filters.command(["savethumb@torlecbot"]) & Filters.chat(chats=AUTH_CHANNEL)
     )
     app.add_handler(save_thumb_nail_handler)
     #
     clear_thumb_nail_handler = MessageHandler(
         clear_thumb_nail,
-        filters=Filters.command(["delthumb"]) & Filters.chat(chats=AUTH_CHANNEL)
+        filters=Filters.command(["delthumb@torlecbot"]) & Filters.chat(chats=AUTH_CHANNEL)
     )
     app.add_handler(clear_thumb_nail_handler)
     #
