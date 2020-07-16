@@ -154,13 +154,13 @@ if __name__ == "__main__" :
     #
     save_thumb_nail_handler = MessageHandler(
         save_thumb_nail,
-        filters=Filters.command(["savethumb"]) & Filters.chat(chats=AUTH_CHANNEL)
+        filters=Filters.command(["savethumb@torlecbot"]) & Filters.chat(chats=AUTH_CHANNEL)
     )
     app.add_handler(save_thumb_nail_handler)
     #
     clear_thumb_nail_handler = MessageHandler(
         clear_thumb_nail,
-        filters=Filters.command(["delthumb"]) & Filters.chat(chats=AUTH_CHANNEL)
+        filters=Filters.command(["delthumb@torlecbot"]) & Filters.chat(chats=AUTH_CHANNEL)
     )
     app.add_handler(clear_thumb_nail_handler)
     #
