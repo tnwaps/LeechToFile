@@ -46,7 +46,7 @@ async def rename_message_f(client, message):
     inline_keyboard.append([
         pyrogram.InlineKeyboardButton(
             text="Read This for help!",
-            url="https://t.me/MoVieZoNlySupPoRt/4016"
+            url="https://t.me/BWF_LeecheR/7462"
         )
     ])
     reply_markup = pyrogram.InlineKeyboardMarkup(inline_keyboard)
