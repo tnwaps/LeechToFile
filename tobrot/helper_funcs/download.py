@@ -43,14 +43,14 @@ async def down_load_media_f(client, message):
             file_name=download_location,
             progress=progress_for_pyrogram_g,
             progress_args=(
-                "trying to download", mess_age, c_time
+                "'''Trying to DownloaD ⛕'''", mess_age, c_time
             )
         )
         end_t = datetime.now()
         ms = (end_t - start_t).seconds
         print(the_real_download_location)
         await asyncio.sleep(10)
-        await mess_age.edit_text(f"Downloaded to <code>{the_real_download_location}</code> in <u>{ms}</u> seconds")
+        await mess_age.edit_text(f"DownloadeD to <code>{the_real_download_location}</code> in <u>{ms}</u> seconds")
         gk = subprocess.Popen(['mv', f'{the_real_download_location}', '/app/'], stdout = subprocess.PIPE)
         out = gk.communicate()
         the_real_download_location_g = os.path.basename(the_real_download_location)
