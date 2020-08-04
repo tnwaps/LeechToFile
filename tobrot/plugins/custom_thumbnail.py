@@ -19,7 +19,7 @@ async def save_thumb_nail(client, message):
         thumbnail_location,
         str(message.from_user.id) + ".jpg"
     )
-    ismgs = await message.reply_text("processing ...")
+    ismgs = await message.reply_text("Processing ...")
     if message.reply_to_message is not None:
         if not os.path.isdir(thumbnail_location):
             os.makedirs(thumbnail_location)
@@ -45,7 +45,7 @@ async def save_thumb_nail(client, message):
         os.remove(downloaded_file_name)
         await ismgs.edit(
             "Custom video / file thumbnail saved. " + \
-            "This image will be used in the upload, till /clearthumbnail."
+            "This image will be used in the upload, till clearthumbnail."
         )
     else:
         await message.edit("Reply to a photo to save custom thumbnail")
