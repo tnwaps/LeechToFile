@@ -45,7 +45,7 @@ async def progress_for_pyrogram_g(
             ''.join([UN_FINISHED_PROGRESS_STR for i in range(20 - math.floor(percentage / 5))]),
             round(percentage, 2))
 
-        tmp = progress + "〘{0}〙 of 〘{0}〙\n**Speed**🚀: {2}/s\n**ETA:** 〘{3}〙\n".format(
+        tmp = progress + "〘{0}〙/〘{0}〙\n**Speed**🚀: {2}/s\n**ETA:** 〘{3}〙\n".format(
             humanbytes(current),
             humanbytes(total),
             humanbytes(speed),
