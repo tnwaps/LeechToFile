@@ -322,7 +322,7 @@ async def upload_single_file(message, local_file_name, caption_str, from_user, e
                     #reply_to_message_id=message.reply_to_message.message_id,
                     progress=progress_for_pyrogram,
                     progress_args=(
-                        "trying to upload",
+                        "☢️**Uploading**☢️",
                         message_for_progress_display,
                         start_time
                     )
