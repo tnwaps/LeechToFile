@@ -19,7 +19,7 @@ async def save_thumb_nail(client, message):
         thumbnail_location,
         str(message.from_user.id) + ".jpg"
     )
-    ismgs = await message.reply_text("Processing ...")
+    #ismgs = await message.reply_text("Processing ...")
     if message.reply_to_message is not None:
         if not os.path.isdir(thumbnail_location):
             os.makedirs(thumbnail_location)
@@ -43,12 +43,12 @@ async def save_thumb_nail(client, message):
         img.save(thumb_image_path, "JPEG")
         # https://pillow.readthedocs.io/en/3.1.x/reference/Image.html#create-thumbnails
         os.remove(downloaded_file_name)
-        await ismgs.edit(
-            "✅️Custom Thumbnail Saved."
+        #await ismgs.edit(
+        #    "✅️Custom Thumbnail Saved."
            
-        )
-    else:
-        await message.edit("Reply to a photo to save custom thumbnail")
+        #)
+    #else:
+        #await message.edit("Reply to a photo to save custom thumbnail")
 
 
 async def clear_thumb_nail(client, message):
