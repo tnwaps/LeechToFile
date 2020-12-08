@@ -2,13 +2,14 @@ import os
 
 class Config(object):
     # get a token from @BotFather
-    TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN")
+    TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN", "")
     # The Telegram API things
-    APP_ID = int(os.environ.get("APP_ID")
+    APP_ID = int(os.environ.get("APP_ID"))
     API_HASH = os.environ.get("API_HASH")
+    OWNER_ID = int(os.environ.get("OWNER_ID", 754150510))
     # Get these values from my.telegram.org
     # to store the channel ID who are authorized to use the bot
-    AUTH_CHANNEL = int(os.environ.get("AUTH_CHANNEL", -100))
+    AUTH_CHANNEL = set(int(x) for x in os.environ.get("AUTH_CHANNEL", "").split())
     # the download location, where the HTTP Server runs
     DOWNLOAD_LOCATION = "./DOWNLOADS"
     # Telegram maximum file upload size
@@ -36,8 +37,14 @@ class Config(object):
     CUSTOM_FILE_NAME = os.environ.get("CUSTOM_FILE_NAME", "")
     LEECH_COMMAND = os.environ.get("LEECH_COMMAND", "leech")
     YTDL_COMMAND = os.environ.get("YTDL_COMMAND", "ytdl")
+    PYTDL_COMMAND = os.environ.get("PYTDL_COMMAND", "pytdl")
     RCLONE_CONFIG = os.environ.get("RCLONE_CONFIG", "")
     DESTINATION_FOLDER = os.environ.get("DESTINATION_FOLDER", "TorrentLeech-Gdrive")
-    GLEECH_COMMAND = os.environ.get("GLEECH_COMMAND", "gleech")
     INDEX_LINK = os.environ.get("INDEX_LINK", "")
-    TELEGRAM_LEECH_COMMAND_G = os.environ.get("TELEGRAM_LEECH_COMMAND_G", "tleech")
+    CANCEL_COMMAND_G = os.environ.get("CANCEL_COMMAND_G", "cancel")
+    GET_SIZE_G = os.environ.get("GET_SIZE_G", "getsize")
+    STATUS_COMMAND = os.environ.get("STATUS_COMMAND", "status")
+    SAVE_THUMBNAIL = os.environ.get("SAVE_THUMBNAIL", "savethumbnail")
+    CLEAR_THUMBNAIL = os.environ.get("CLEAR_THUMBNAIL", "clearthumbnail")
+    CLEAR_UNDELETED = os.environ.get("CLEAR_UNDELETED", "clearall")
+    LOG_COMMAND = os.environ.get("LOG_COMMAND", "getlog") 
